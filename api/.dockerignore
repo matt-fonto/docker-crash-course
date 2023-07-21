@@ -1,0 +1,3 @@
+# here, we specify things we don't want docker to add to the image
+
+node_modules

@@ -1,0 +1,16 @@
+# version: the version of Docker
+version: "3.8"
+
+# services: the services that will be used in the application
+services:
+  api:
+    # relative path to the Dockerfile
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: api_c
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
